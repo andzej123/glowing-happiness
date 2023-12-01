@@ -6,5 +6,22 @@ const myFunction = () => {
   menu.classList.toggle("burger_menu_hidden");
 };
 
-button.addEventListener("click", myFunction);
-closeButton.addEventListener("click", myFunction);
+// button.addEventListener("click", myFunction);
+// closeButton.addEventListener("click", myFunction);
+
+document.body.addEventListener("click", function (event) {
+  if (button.contains(event.target)) {
+    menu.classList.toggle("burger_menu_hidden");
+    return;
+  }
+  if (closeButton.contains(event.target)) {
+    menu.classList.toggle("burger_menu_hidden");
+    return;
+  }
+
+  if (menu.contains(event.target)) {
+    return;
+  } else {
+    menu.classList.remove("burger_menu_hidden");
+  }
+});
