@@ -42,7 +42,7 @@ body {
 
 .circle_top {
   background-color: var(--CircleColor);
-  top: -548px;
+  top: -545px;
   left: -202px;
   z-index: -1;
 }
@@ -99,6 +99,7 @@ body {
   padding: 48px 24px;
   transition: 0.2s;
   min-height: 667px;
+  height: 100vh;
   transform: translateX(100vw);
   overflow: hidden;
   z-index: 7;
@@ -528,4 +529,18 @@ footer form {
 .social_media a:active,
 .footer_list li:active {
   transform: translateY(2px);
+}
+
+.circle_top {
+  left: calc((100vw - 780px) / 2);
+}
+
+.circle_burger_menu {
+  left: calc((100vw - 780px) / 2 - 20.2vw);
+}
+
+@media only screen and (min-width: 625px) {
+  .circle_burger_menu {
+    left: calc((-205px - ((100vw - 625px)) * 0.50704));
+  }
 }
